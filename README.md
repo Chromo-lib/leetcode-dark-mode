@@ -1,4 +1,4 @@
-# Github dark mode
+# LeetCode dark mode
 Browser extension..
 
 ## Icon
@@ -6,7 +6,7 @@ Browser extension..
 ![icon](icons/icon64.png)
 
 ### Capture
-![capture](https://i.ibb.co/VWpcG2H/Capture.png)
+![capture](https://i.ibb.co/GJpG8LZ/Capture.png)
 
 
 # License
