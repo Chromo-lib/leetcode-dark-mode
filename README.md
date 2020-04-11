@@ -1,7 +1,7 @@
 ### WeatherNow: Get the Weather of your city
 
 ### Capture
-![WeatherNow](w-extension.png)
+![WeatherNow](w-extension.PNG)
 
 ### License
 MIT
