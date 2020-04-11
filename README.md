@@ -1,13 +1,7 @@
-# LeetCode dark mode
-Browser extension..
-
-## Icon
-
-![icon](icons/icon64.png)
+### WeatherNow: Get the Weather of your city
 
 ### Capture
-![capture](https://i.ibb.co/GJpG8LZ/Capture.png)
+![WeatherNow](w-extension.png)
 
-
-# License
+### License
 MIT

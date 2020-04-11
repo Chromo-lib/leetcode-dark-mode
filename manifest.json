@@ -1,26 +1,19 @@
 {
+  "name": "WeatherNow",
+  "version": "0.0.1",
+  "description": "Get the Weather of your city",
   "manifest_version": 2,
-  "name": "LeetCode dark mode",
-  "description": "LeetCode dark mode.",
-  "version": "1.0",
-  "icons": {
-    "512": "icons/icon512.png",
-    "128": "icons/icon128.png",
-    "64": "icons/icon64.png",
-    "32": "icons/icon32.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://*.leetcode.com/*"
-      ],
-      "run_at": "document_idle",
-      "js": [
-        "content.js"
-      ],
-      "css": [
-        "style.css"
-      ]
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "WeatherNow",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
     }
-  ]
+  }
 }
