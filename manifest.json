@@ -1,14 +1,26 @@
 {
-  "name": "WeatherNow",
-  "version": "0.0.1",
-  "description": "Get the Weather of your city",
   "manifest_version": 2,
+  "name": "W-Currency",
+  "description": "Simple and fast World currency converter..",
+  "version": "1.0.0",
+  "icons": {
+    "256": "icons/icon256.png",
+    "128": "icons/icon128.png",
+    "64": "icons/icon64.png",
+    "32": "icons/icon32.png"
+  },
+  "browser_action": {
+    "default_title": "W-Currency",
+    "default_popup": "popup.html",
+    "browser_style": false
+  },
   "permissions": [
+    "activeTab",
     "storage"
   ],
-  "browser_action": {
-    "default_title": "WeatherNow",
-    "default_popup": "scripts/popup.html",
-    "default_icon": {}
+  "background": {
+    "scripts": [
+      "./scripts/background.js"
+    ]
   }
 }

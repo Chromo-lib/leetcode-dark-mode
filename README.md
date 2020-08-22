@@ -1,7 +1,12 @@
-### WeatherNow: Get the Weather of your city
+# W-Currency
 
-### Capture
-![WeatherNow](w-extension.PNG)
+Browser extension
+Simple and fast World currency converter..
 
-### License
+![Capture](capture.png)
+
+### Icon
+![icon](icons/icon64.png)
+
+# License
 MIT
