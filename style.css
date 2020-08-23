@@ -23,16 +23,17 @@ html {
 body {
   background: #2d2d2e;
   background-image: linear-gradient(0deg,rgba(17,14,31,.35),rgba(17,14,31,.35)),linear-gradient(330deg,#191716eb -10%,#607d8bf5 46.3%,#e91e63ad 110%),url(assets/bg.jpg);
-  width: 320px;
+  width: 280px;
   height: 350px;
   max-height: 350px;
-  font-family: 'Consolas', sans-serif;
   margin: 0;  
+  font-family:arial,sans-serif;
   overflow-x: hidden;
+  scrollbar-width: thin;
 }
 
 header {  
-  height: 15%;
+  height: 20%;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -43,9 +44,9 @@ header {
   letter-spacing: 2px;
 }
 
-header button {    padding: 3px 10px 0;}
+  header button { background-color:transparent !important;}
 
-.container {height: 84%;}
+.container {height: 78%;}
 .container, header {padding:10px;}
 
 h3 {text-align: center;  margin: 0; }
@@ -78,14 +79,16 @@ a {
     outline: none !important;
 }
 
+button:first-child{padding: 5px 0 0 0; background: transparent;}
+
 .btn-default {
   background-color: transparent !important;
   border-color: #3a444d;
 }
 
 button img { width: 20px;  height: 20px;}
-button:hover,a:hover { background-color: var(--dark);}
-.btn-default:hover {  background-color: #3a444d !important; }
+button:hover,a:hover { background-color: #ffffff59 !important;}
+
 button,
 svg {
   display: inline-block;
@@ -97,7 +100,7 @@ input {
   color: var(--dark);
   width: 100%;
   font-size: 16px;
-  padding: 10px;
+  padding: 15px 10px;
   border: 0;
   outline: none !important;
 }
@@ -132,6 +135,7 @@ li {
 
 .d-flex-col {display:flex; flex-direction: column; justify-content: space-between;}
 .justify-center {  justify-content: center;}
+.justify-between {  justify-content: space-between;}
 .align-center { align-items: center;}
 
 .col-3>* {  width: 31%;  max-width: 31%;}
@@ -142,33 +146,32 @@ li {
   max-width: 100%;
   min-width: 0;
 }
+.w-50 {width: 47%;}
 
 .py-1 {padding: 10px 0;}
 
+.m-0 {margin:0 !important;}
+.mb-0 { margin-bottom: 0;}
 .mb-10 { margin-bottom: 10px;}
-.mr-5 { margin-right: 5;}
+.mr-5 { margin-right: 5px !important;}
 .mr-10 {margin-right: 10px;}
 .ml-10 {margin-left: 10px;}
 
 .fs-18 {font-size: 18px !important;}
+
 .txt-left {text-align: left;}
 
-.disabled {
-  background-color: var(--light-dark);
-}
+.disabled {background-color: var(--light-dark);}
 
-.badge {    font-size: 10px; color: #b8b8b8;}
+.badge { font-size: 10px; color: #b8b8b8;}
 /*******************************/
-.output {
-  text-align: center;
-  background-color: var(--light);
-  padding: 10px;
-  box-shadow: var(--box-shad);
-  text-align: center;
-  text-transform: uppercase;
+.date-output {
+    padding: 10px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: var(--box-shad);
 }
-
-.output h2 {font-size: 30px; margin: 0;}
 /**************************************/
 .history-conversions {display: none;
   color: #fff;
@@ -199,7 +202,7 @@ li {
   position: absolute; left: 0; top: 50px; z-index: 999;
   background: #fff; 
   color: #333;
-  height: 200px;
+  height: 170px;
 }
 
 .dropdown>ul.list li img{ margin-right: 5px; }

@@ -3,10 +3,12 @@
   let allConversions = null; // history of conversions
   let showHistory = false;
   const historyConversionsEL = document.querySelector('.history-conversions');
-  const conversionContainerEL = document.querySelector('.conversion-container');
+  const convTab = document.querySelector('.conv-tab');
   const btnShowHistory = document.getElementById('btn-show-history');
-  const outputQuery = document.querySelector('.output');
   const spinnerEL = document.querySelector('.spinner');
+
+  const dateOutput = document.querySelector('.date-output');
+  dateOutput.textContent = new Date().toDateString();
 
   chrome.storage.local.get(['historyConversions'], function (result) {
     if (result && result.historyConversions) {
@@ -47,7 +49,7 @@
     setTimeout(() => {
       showHistory = !showHistory;
       historyConversionsEL.style.display = showHistory ? 'block' : 'none';
-      conversionContainerEL.style.display = showHistory ? 'none' : 'block';
+      convTab.style.display = showHistory ? 'none' : 'block';
       btnShowHistory.innerHTML = showHistory
         ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 2.83209C17.7751 2.2969 16.4222 2 15 2C9.47715 2 5 6.47715 5 12C5 17.5228 9.47715 22 15 22C16.4222 22 17.7751 21.7031 19 21.1679M2 10H15M2 14H15" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`
         : `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 22V4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V22L12 15.8889L5 22Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
@@ -69,9 +71,13 @@
   }
 
   function setConversionResult (resp) {
-    outputQuery.children[0].textContent = new Date(resp.date).toDateString();
-    outputQuery.children[1].textContent = resp.query.amount + ' ' + resp.query.from;
-    outputQuery.children[3].textContent = resp.result + ' ' + resp.query.to;
+    function toFixed (value, precision = 4) {
+      var power = Math.pow(10, precision || 0);
+      return String(Math.round(value * power) / power);
+    }
+
+    dateOutput.textContent = new Date(resp.date).toDateString();
+    document.getElementById('c-output').value = toFixed(resp.result);
   }
 
   function createListHistoryConversions (historyConversions) {

@@ -20,34 +20,39 @@
       </div>
     </div>
 
-    <div>
-      <button type="button" class="di-flex justify-center" id="btn-reverse" title="Switch currencies" >
-        <img src="assets/reverse.png" alt="reverse">
-      </button>
-
-      <button type="button" class="di-flex justify-center" id="btn-show-history" title="History">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 22V4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V22L12 15.8889L5 22Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      </button>
-    </div>
+    <button type="button" class="di-flex justify-center" id="btn-show-history" title="History">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 22V4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V22L12 15.8889L5 22Z" stroke="#fff"
+          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
   </header>
 
   <div class="container">
-    <div class="conversion-container">
+    <div class="conv-tab">
+      <button type="button" class="w-100 di-flex justify-center mb-10" id="btn-reverse" title="Switch currencies">
+        <img src="assets/reverse.png" alt="reverse">
+      </button>
+  
       <form class="w-100 mb-10" id="form-convert">
         <div class="drops d-flex"></div>
-        <input type="number" class="w-100 mb-10" name="amout" value="1" placeholder="amout">
+        <div class="w-100 d-flex justify-between">
+          <input type="number" class="w-50 mb-10" name="amout" value="1" placeholder="amout">
+          <input type="number" class="w-50 mb-10" id="c-output" name="c-output" step="0.01" placeholder="c-output"
+            readonly>
+        </div>
+  
+        <p class="mt-0 date-output">Tur Aug 12 2020</p>
         <button type="submit" class="w-100 btn-default fs-18">Convert</button>
       </form>
-
-      <div class="w-100 output d-flex-col">
-        <span></span><h2></h2><span>=</span><h2></h2>
-      </div>
     </div>
 
     <ul class="history-conversions"></ul>
   </div>
 
-  <div class="spinner d-flex justify-center"><div class="lds-dual-ring"></div></div>
+  <div class="spinner d-flex justify-center">
+    <div class="lds-dual-ring"></div>
+  </div>
 
   <script src="scripts/currencies.js"></script>
   <script src="scripts/DOM.js"></script>
