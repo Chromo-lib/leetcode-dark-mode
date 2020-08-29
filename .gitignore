@@ -1,2 +1,13 @@
-*.zip
+node_modules/
+
+build/
+dist/
+
+.cache
+dist.zip
+yarn.lock
+
 *.rar
+*.zip
+
+package-lock.json

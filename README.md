@@ -3,10 +3,12 @@
 Browser extension
 Simple and fast World currency converter..
 
-![Capture](w-currency.png)
+![Capture](capture.png)
+
+![Capture](capture2.png)
 
 ### Icon
-![icon](icons/icon64.png)
+![icon](public/icons/icon64.png)
 
 # License
 MIT

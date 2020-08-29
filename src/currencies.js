@@ -143,3 +143,5 @@ const currencies = [
 		icon: "tunisia.svg"
 	},
 ];
+
+export default currencies;

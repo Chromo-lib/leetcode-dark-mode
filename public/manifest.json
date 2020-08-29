@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "W-Currency",
   "description": "Simple and fast World currency converter..",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icons": {
     "256": "icons/icon256.png",
     "128": "icons/icon128.png",
@@ -20,7 +20,7 @@
   ],
   "background": {
     "scripts": [
-      "./scripts/background.js"
+      "background.js"
     ]
   }
 }
